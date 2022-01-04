@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+           
+        }
+        .offers{
+           
+            background-color: rgb(36, 35, 35);
+            margin: auto;
+           height: 370px;
+           display: flex;
+           
+        }
+        .stickers{
+            height: 250px;
+            width: 250px;
+            margin:auto;
+        }
+
+        .restaurants{
+            border-top: 2px solid black;
+            width: 90%;
+            display: grid;  
+            grid-template-columns: repeat(3,30%);
+            grid-template-rows: repeat(auto,auto);
+            grid-gap: 40px;
+            margin: auto;
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+        }
+        .foodDiv{
+            border: 1px solid grey;
+            margin-top: 10px;
+           /* margin: 10px 20px 20px 10px; */
+        }
+        .foodDiv>img{ 
+            width: 100%;
+            height: 60%
+        }.foodDiv > h1,p {
+            padding: 10px;
+            line-height: 10px;
+        }
+        .home{
+            display: flex;
+            /* justify-content: space-between; */
+        }
+        .navigation{
+            margin: auto;
+            display: flex;
+        }
+        .navigation > img{
+            height: 50px;
+            width: fit-content;
+        }
+        .navigation > input,label {
+            width: 100px;
+            height: 20px;
+            margin-right:10px ;
+            margin-top: 20px;
+        }
+        #address{
+            margin: auto;
+        }
+
+        .sec{
+            display: flex;
+            
+            justify-content: space-between;
+        }
+        .sections{
+            font: oblique;
+            color: grey;
+            font-size: large;
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="searchbar">
+        
+    </div>
+    <div class="home">
+        <div class="navigation">
+            <img src="data:image/png;base64,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" style="height: 100px; width: 41%;">
+            <p id="address" style="color: rgb(102, 98, 98); font-weight: bolder; "> Old Town</p>
+             
+        </div>
+        <div class="navigation">
+            <input type="text" name="search" id="search">
+            <label for="search">Search</label>
+            <p style="color: rgb(102, 98, 98);">Offers</p>
+            <p style="color: rgb(102, 98, 98);">Help</p>
+            <p style="color: rgb(102, 98, 98);">Sign in</p>
+            <p style="color: rgb(102, 98, 98);">Cart</p>
+            
+        </div>
+    </div>
+
+    <div class="offers"; style="background-color: rgb(24, 22, 22); ">
+     <img  src="https://github.com/riteshf/files/blob/main/offer1.jpeg?raw=true" class="stickers">
+     <img src="https://github.com/riteshf/files/blob/main/offer2.jpeg?raw=trueg" class="stickers">
+     <img src="https://github.com/riteshf/files/blob/main/offer3.jpeg?raw=true" class="stickers">
+     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/omhjfsrgi5fjkg81ivhj" class="stickers">
+    </div>
+    <div class="sec">
+        <h1 style="margin-left: 20px;">140 Restaurants</h1>
+        <p class="sections">Relevance</p>
+        <p class="sections">Delivery Time</p>
+        <p class="sections">Rating</p>
+        <p class="sections">Cost: Low to High</p>
+        <p class="sections">Cost: High to Low</p>
+    </div>
+   
+    <div class="restaurants">
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant1.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant2.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant3.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant4.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant5.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant6.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant7.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant8.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant9.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant10.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant5.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+
+        <div class="foodDiv">
+            <img src="https://github.com/riteshf/files/blob/main/restaurant4.jpeg?raw=true" alt=""; class="food">
+            <h1>Mysore hub</h1>
+            <p>Biryani</p>
+            <hr>
+            <p>60% off| use TRY NEW!</p>
+        </div>
+    </div>
+</body>
+</html>

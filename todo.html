@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 450px;
+            margin: auto;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        #name{
+            margin: auto;
+            width: 250px;
+            height: 50px;
+
+        }
+        #add{
+            height: 50px;
+            width: 200px;
+        }
+        #status{
+            width: 20px;
+            height: 20px;
+            /* size: 200px; */
+        }
+    </style>
+    <GET https://json-server-mocker-masai.herokuapp.com/tasks>
+        <POST https://json-server-mocker-masai.herokuapp.com/tasks></POST> >
+
+</head>
+<body>
+
+        
+    <div id="container">
+        <input id="name" type="text">
+        <input id="status" type="checkbox">
+        <button id="add" onclick="confirm()" >Add</button>
+    </div>
+</body>
+</html>
+<GET>
+
+
+    <JSON>
+   let branthi = getElementById("tasks")
+      GET https://json-server-mocker-masai.herokuapp.com/tasks  {
+            
+               
+                "id":1,
+                "status": true;
+            
+        }
+    </JSON>
+<script>
+
+
+    // let storage = JSON.parse(localStorage.getItem("data")) ||[]
+    
+    
+
+    
+    
+   async function confirm(){
+        let name = document.getElementById("name").value;
+        let status = document.getElementById("status").checked; 
+        
+        var obj={
+            title: document.getElementById("name").value,
+            status: document.getElementById("status").checked,
+        }
+        obj = JSON.stringify(obj)
+        let response = await fetch("https://json-server-mocker-masai.herokuapp.com/tasks",{
+            method: "POST",
+            body: obj,
+            headers: {
+                "Content-type" : "application/json"
+            }
+        })
+        let data = await response.json()
+        console.log("obj:",data)
+    // data.push(obj)
+    // localStorage.setItem("data",JSON.stringify(data))
+
+}
+
+
+
+
+
+</script>

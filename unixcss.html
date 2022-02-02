@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            height: auto;
+            padding: 5%;
+            margin: auto;
+            /* border: 2PX solid black; */
+        }
+        #box1{
+            /* border: 1px solid red; */
+            height: auto;
+            width: 400px;
+            margin: auto;
+            background-color: burlywood;
+            margin-bottom: 60px;
+        }
+        #img1{
+            height: 200px;
+            width: 150px;
+            justify-content: center;
+            margin-left: 120px;
+            padding-top: 3%;
+        }
+        #box1 > h1{
+            color: rgb(4, 57, 155);
+            text-align: center;
+        }
+
+        #box1 > p{
+            text-align: center;
+            font-size: x-large;
+        }
+
+        #box2{
+            /* border: 1px solid blue; */
+            display: flex;
+            padding:2%;
+        }
+        #img2 > img{
+            height: 200px;
+            width: 130px;
+            margin-right: 20px;
+        }
+
+        #text > h1{
+            color: crimson;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        } 
+        #text > p{
+            font-size: 19px;
+            font-weight:30px;
+        }
+
+        #box3{
+            display: flex;
+            /* border: 1px solid black; */
+            height: 150px;
+            flex-wrap: wrap;
+            padding: 0px;
+            background-color: chocolate;
+        }
+        #rightSide,#leftSide{
+            margin-left: 20px;
+            /* border: 1px solid yellow; */
+            
+        }
+
+        #leftSide > h2{
+            padding: 1%;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: xx-large;
+        }
+
+        #rightSide > h2{
+            padding: 1%;
+            color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: xx-large;
+        }
+
+        #rightSide{
+            text-align: right;
+            margin-left: 100px;
+        }
+
+        #line{
+            height: 100px;
+            width: 10px;
+            background-color: black;
+            margin: 27px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1">
+            <img id="img1" src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg" alt="">
+            <h1>Linus Torvalds</h1>
+            <p>The creator of Linux & Git</p>
+        </div>
+
+        <div id="box2">
+            <div id="img2">
+                <img src="https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg" alt="">
+            </div>
+            <div id="text">
+                <h1>Sal Khan</h1>
+            <p>Salman Khan is the founder of the Khan Avademy which has a mission of providing a freee world-class education for anyone, anywhere.</p>
+            </div>
+            
+
+        </div>
+        <div id="box3">
+            <div id="leftSide">
+                <h2>Ken Thompson</h2>
+                <p>Designed and implemented the original unix operating system</p>
+            </div>
+            <div id="line" ></div>
+            <div id="rightSide">
+                <h2>Dennis Ritchie</h2>
+                <p>The creator of C Programming Language</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* large screen */
+        @media screen and (min-width:768px){
+            #nav{
+                display: block;
+                background-color: yellow;
+                height: 100px;
+                margin: 10px;
+                padding: 1%;
+                
+            }
+            .container{
+                padding: 1%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+            }
+
+            #left{
+                background-color: red;
+                height: 400px;
+            }
+
+            #right{
+                background-color: green;
+                height: 400px;
+            }
+        }
+
+        @media screen and (min-width:100px) and (max-width:767px){
+            #nav{
+                display: block;
+                background-color: yellow;
+                height: 100px;
+                margin: 10px;
+                padding: 1%;
+                
+            }
+            .container{
+                padding: 1%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 20px;
+            }
+
+            #left{
+                background-color: red;
+                height: 200px;
+            }
+
+            #right{
+                background-color: green;
+                height: 200px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+        <div id="nav">Navigation</div>
+        <div class="container">
+        <div id="left">Left Box</div>
+        <div id="right">Right Box</div>
+    </div>
+</body>
+</html>

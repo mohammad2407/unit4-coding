@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Web</h1>
+    <p>Names : Rehman, Nrupul, EremJaegar, MikasaAckerman, Bertholdt, Nejuko</p>
+    <p id="num"></p>
+    <p id="demo"></p>
+</body>
+<script>
+    var names = ["armin", "Nrupul", "ErenJaegar", "MikasaAckerman" , "Astha", "Nejuko"]
+    let sum = 0;
+    var arr = [];
+            names.map((x) => {
+                if(x[0] == "a" || x[x.length-1] == "a")
+                   arr.push(x)
+                })
+     console.log(sum)
+    //  document.getElementById("demo").textContent = "The sum of length of the names is " + sum;
+     document.getElementById("num").textContent = "Names with a at the start or ending " + arr.join(",");
+
+</script>
+</html>
